@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/calveym/makersyelp.svg?branch=master)](https://travis-ci.org/calveym/makersyelp)
+
 # makersyelp
 
 ##MVP User Stories
@@ -31,3 +33,4 @@ I want to be able to see all reviews for every restaurant.
 As a Hungry Human,
 So I can quickly judge a restaurant,
 I want to see the average rating of each restaurant.
+```

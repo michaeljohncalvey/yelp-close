@@ -18,7 +18,6 @@
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
 require 'rails_helper'
-require_relative '../app/models/restaurant'
 
 
 RSpec.configure do |config|

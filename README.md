@@ -34,3 +34,9 @@ As a Hungry Human,
 So I can quickly judge a restaurant,
 I want to see the average rating of each restaurant.
 ```
+
+## Diagrams
+
+### Diagram 1 (14/11/2016)
+
+![Diagram 1](/images/makersyelp_diagram1.jpg)

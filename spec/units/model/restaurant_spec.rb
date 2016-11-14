@@ -33,7 +33,7 @@ describe 'Restaurant' do
       expect(res).to_not be_valid
     end
 
-    it 'has to have a blurb' do
+    it 'has to have some blurb' do
       res = Restaurant.create(name: 'Felix\'s restaurant', description: ' best food', blurb: nil)
       expect(res).to_not be_valid
     end

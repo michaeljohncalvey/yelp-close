@@ -20,4 +20,24 @@ describe 'Restaurant' do
     end
 
   end
+
+  describe 'validations' do
+
+    it 'has to have a name' do
+      res = Restaurant.create(name: nil, description: 'best food', blurb: 'amazing')
+      expect(res).to_not be_valid
+    end
+
+    it 'has to have a description' do
+      res = Restaurant.create(name: 'Felix\'s restaurant', description: nil, blurb: 'amazing')
+      expect(res).to_not be_valid
+    end
+
+    it 'has to have a blurb' do
+      res = Restaurant.create(name: 'Felix\'s restaurant', description: ' best food', blurb: nil)
+      expect(res).to_not be_valid
+    end
+
+  end
+
 end

@@ -1,12 +1,10 @@
 <h1>Restaurants list</h1>
 
-<p> Mike's restaurant </p>
-
 <div class="restaurant-list">
   <ul id ='restaurants'>
  <% @restaurants.each do |restaurant| %>
  <li>
-   Name: <%= restaurant.name %> <br>
+   Name: <a id="<%= restaurant.id %>" href="/restaurants/view/<%= restaurant.id %>">  <%= restaurant.name %>  </a><br>
    Description: <%= restaurant.description %> <br>
    Blurb: <%= restaurant.blurb %> <br>
  </li>

@@ -22,7 +22,6 @@ class RestaurantsController < ApplicationController
 
   def view
     @restaurant = Restaurant.where(id: params[:id])
-    p @restaurant
     @name = @restaurant[0].name
     @blurb = @restaurant[0].blurb
     @description = @restaurant[0].description

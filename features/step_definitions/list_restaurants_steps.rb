@@ -1,5 +1,6 @@
 
 When(/^I go to the homepage$/) do
+  Restaurant.create(name: "yo",description: "yoo", blurb: "yooo")
   visit '/restaurants/list'
 end
 
@@ -9,7 +10,7 @@ end
 
 
 Then(/^I can click link for a restaurant$/) do
-  Restaurant.create(name: "yo",description: "yoo", blurb: "yooo")
+  expect(page).to have_content("yo")
   click_link ('1')
-  expect(current_path).to eq '/restaurant/view/1'
+  expect(current_path).to eq '/restaurants/view/1'
 end

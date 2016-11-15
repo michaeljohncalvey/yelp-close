@@ -8,3 +8,11 @@ Then(/^I can a see form with name, blurb and description fields$/) do
   expect(page).to have_field("restaurant[description]")
   expect(page).to have_button("Add Restaurant")
 end
+
+Add (/^I add the details of my restaurant$/) do
+  
+end
+
+Add (/^I click on the Add Restaurant button$/) do
+  click_button "Add Restaurant"
+end

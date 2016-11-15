@@ -4,7 +4,7 @@ class RestaurantsController < ApplicationController
   end
 
   def create
-    @restaurant = Restaurant.new(params[:restaurant])
+    @restaurant = Restaurant.new(restaurant_params)
     @restaurant.save
     redirect_to 'restaurants/list'
   end
@@ -17,5 +17,11 @@ class RestaurantsController < ApplicationController
   end
 
   def delete
+  end
+
+  private
+
+  def restaurant_params
+    params.require(:restaurant).permit(:name, :blurb, :description)
   end
 end

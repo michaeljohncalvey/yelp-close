@@ -9,6 +9,6 @@ Then I can a see form with name, blurb and description fields
 
 Scenario: Owner can see newly created restaurant
 When I go to the add form page
-Add I add the details of my restaurant
-Add I click on the Add Restaurant button
+And I add the details of my restaurant
+And I click on the Add Restaurant button
 Then I will see my restaurant on the main page

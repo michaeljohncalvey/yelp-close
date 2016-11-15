@@ -9,5 +9,6 @@ Feature: See lists of restaurants on homepage
     Then A restaurant-list class div must exist
 
   Scenario: User can see list of restaurants(not hardcoded)
+    Given a restaurant exists
     When I go to the homepage
-    Then I see a list of not hardcoded restaurants
+    Then I see a list of restaurants

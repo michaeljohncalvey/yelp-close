@@ -10,7 +10,6 @@ class RestaurantsController < ApplicationController
   end
 
   def list
-    Restaurant.create(name: "Felix's Firey Fish Fingers", description: "It's one of the best, the food is so fiery, the food is so great.", blurb: "An amazingly arduous amorphous adventure")
     @restaurants = Restaurant.all
     render :action => "list"
   end
@@ -19,6 +18,15 @@ class RestaurantsController < ApplicationController
   end
 
   def delete
+  end
+
+  def view
+    @restaurant = Restaurant.where(id: params[:id])
+    p @restaurant
+    @name = @restaurant[0].name
+    @blurb = @restaurant[0].blurb
+    @description = @restaurant[0].description
+    render action: "view_restaurant"
   end
 
   private

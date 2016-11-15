@@ -35,6 +35,7 @@ gem 'coveralls', require: false
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  gem 'capybara'
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
   gem 'byebug'

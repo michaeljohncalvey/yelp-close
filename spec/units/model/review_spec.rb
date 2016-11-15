@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe Review, type: :model do
   subject(:review) {Review.create(rating: 5, comment: "It's one of the best, the food is so fiery, the food is so great.") }

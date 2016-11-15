@@ -10,6 +10,6 @@ script:
   - bundle exec rake db:migrate --trace
   - bundle exec rspec spec
   - bundle exec rake cucumber
-  
+
 after_success:
-  - coveralls
+  - coveralls:push

@@ -1,4 +1,7 @@
 [![Build Status](https://travis-ci.org/calveym/makersyelp.svg?branch=master)](https://travis-ci.org/calveym/makersyelp)
+[![Coverage Status](https://coveralls.io/repos/github/calveym/makersyelp/badge.svg?branch=coveralls%2316)](https://coveralls.io/github/calveym/makersyelp?branch=coveralls%2316)
+[![Stories in Backlog](https://badge.waffle.io/calveym/makersyelp.svg?label=backlog&title=Backlog)](http://waffle.io/calveym/makersyelp)
+[![Stories in Done](https://badge.waffle.io/calveym/makersyelp.svg?label=done&title=Done)](http://waffle.io/calveym/makersyelp)
 
 # makersyelp
 

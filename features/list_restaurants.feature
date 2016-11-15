@@ -6,4 +6,4 @@ Feature: See lists of restaurants on homepage
 
   Scenario: List container exists
     When I go to the homepage
-    Then I should see a field "restaurant-list"
+    Then A restaurant-list class div must exist

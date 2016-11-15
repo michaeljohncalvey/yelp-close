@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'restaurants/new'
 
+  post 'restaurants/create'
+
   get 'restaurants/list'
 
   get 'restaurants/modify'

@@ -22,4 +22,5 @@ end
 Then (/^I will see my restaurant on the main page$/) do
   expect(page).to have_content("Bob's Burgers")
   expect(page).to have_content("Simply the best burgers in town")
+  expect(page).to have_content("Real American burgers, right to yourt mouth")
 end

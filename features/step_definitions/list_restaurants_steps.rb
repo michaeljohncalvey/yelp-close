@@ -11,15 +11,15 @@ Then(/^A restaurant-list class div must exist$/) do
 end
 
 Then(/^I see a list of restaurants$/) do
-  see_restaurant_details("Felix's Fiery Fish Fingers",
-                          "Bluuuurb of felix's fiery fish fingers",
-                          "desc of fish fingers",
-                          "W1K2SE")
+  see_restaurant_details("Dio's Develish Doner Kebabs",
+                          "Bluuuurb of Dio's Develish Kebabs",
+                          "desc of doner kebabs",
+                          "W7K2SD")
 end
 
 Given (/^a restaurant exists$/) do
-  add_restaurant("Felix's Fiery Fish Fingers",
-                          "Bluuuurb of felix's fiery fish fingers",
-                          "desc of fish fingers",
-                          "W1K2SE")
+  add_restaurant("Dio's Develish Doner Kebabs",
+                          "Bluuuurb of Dio's Develish Kebabs",
+                          "desc of doner kebabs",
+                          "W7K2SD")
 end

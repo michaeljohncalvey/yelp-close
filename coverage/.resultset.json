@@ -74,7 +74,7 @@
   },
   "Cucumber Features": {
     "coverage": {
-      "/Users/michaelcalvey/code/makers/main/week_8/makersyelp/app/controllers/restaurants_controller.rb": [
+      "/Users/Dio22/.Trash/makersyelp/app/controllers/restaurants_controller.rb": [
         1,
         1,
         3,
@@ -104,26 +104,26 @@
         null,
         null
       ],
-      "/Users/michaelcalvey/code/makers/main/week_8/makersyelp/app/controllers/application_controller.rb": [
+      "/Users/Dio22/.Trash/makersyelp/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null
       ],
-      "/Users/michaelcalvey/code/makers/main/week_8/makersyelp/app/helpers/application_helper.rb": [
+      "/Users/Dio22/.Trash/makersyelp/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/michaelcalvey/code/makers/main/week_8/makersyelp/app/helpers/list_restaurants_helper.rb": [
+      "/Users/Dio22/.Trash/makersyelp/app/helpers/list_restaurants_helper.rb": [
         1,
         null
       ],
-      "/Users/michaelcalvey/code/makers/main/week_8/makersyelp/app/helpers/restaurants_helper.rb": [
+      "/Users/Dio22/.Trash/makersyelp/app/helpers/restaurants_helper.rb": [
         1,
         null
       ],
-      "/Users/michaelcalvey/code/makers/main/week_8/makersyelp/app/models/restaurant.rb": [
+      "/Users/Dio22/.Trash/makersyelp/app/models/restaurant.rb": [
         1,
         1,
         1,
@@ -131,17 +131,17 @@
         1,
         null
       ],
-      "/Users/michaelcalvey/code/makers/main/week_8/makersyelp/app/controllers/list_restaurants_controller.rb": [
+      "/Users/Dio22/.Trash/makersyelp/app/controllers/list_restaurants_controller.rb": [
         0,
         0
       ],
-      "/Users/michaelcalvey/code/makers/main/week_8/makersyelp/app/models/review.rb": [
+      "/Users/Dio22/.Trash/makersyelp/app/models/review.rb": [
         0,
         0,
         0,
         0
       ]
     },
-    "timestamp": 1479230053
+    "timestamp": 1479230653
   }
 }

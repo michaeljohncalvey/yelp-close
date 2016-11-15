@@ -1,4 +1,3 @@
-
 When(/^I go to the homepage$/) do
   visit '/restaurants/list'
 end
@@ -12,9 +11,15 @@ Then(/^A restaurant-list class div must exist$/) do
 end
 
 Then(/^I see a list of restaurants$/) do
-  see_restaurant_details
+  see_restaurant_details("Felix's Fiery Fish Fingers",
+                          "Bluuuurb of felix's fiery fish fingers",
+                          "desc of fish fingers",
+                          "W1K2SE")
 end
 
 Given (/^a restaurant exists$/) do
-  add_restaurant
+  add_restaurant("Felix's Fiery Fish Fingers",
+                          "Bluuuurb of felix's fiery fish fingers",
+                          "desc of fish fingers",
+                          "W1K2SE")
 end

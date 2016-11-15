@@ -1,23 +1,23 @@
 module RestaurantWorld
-  def add_restaurant
-    Restaurant.create(name: "Felix's Firey Fish Fingers",
-                      description: "It's one of the best, the food is so fiery, the food is so great.",
-                      blurb: "An amazingly arduous amorphous adventure",
-                      postcode: "EH89ND")
+  def add_restaurant(name, description, blurb, postcode)
+    Restaurant.create(name: name,
+                      description: description,
+                      blurb: blurb,
+                      postcode: postcode)
   end
 
-  def fill_in_restaurant_form
-    fill_in("restaurant[name]", with: "Felix's Firey Fish Fingers")
-    fill_in("restaurant[description]", with: "It's one of the best, the food is so fiery, the food is so great.")
-    fill_in("restaurant[blurb]", with: "An amazingly arduous amorphous adventure")
-    fill_in("restaurant[postcode]", with: "EH89ND")
+  def fill_in_restaurant_form(name, description, blurb, postcode)
+    fill_in("restaurant[name]", with: name)
+    fill_in("restaurant[description]", with: description)
+    fill_in("restaurant[blurb]", with: blurb)
+    fill_in("restaurant[postcode]", with: postcode)
   end
 
-  def see_restaurant_details
-    expect(page).to have_content("Felix's Firey Fish Fingers")
-    expect(page).to have_content("It's one of the best, the food is so fiery, the food is so great.")
-    expect(page).to have_content("An amazingly arduous amorphous adventure")
-    expect(page).to have_content("EH89ND")
+  def see_restaurant_details(name, description, blurb, postcode)
+    expect(page).to have_content(name)
+    expect(page).to have_content(description)
+    expect(page).to have_content(blurb)
+    expect(page).to have_content(postcode)
   end
 end
 

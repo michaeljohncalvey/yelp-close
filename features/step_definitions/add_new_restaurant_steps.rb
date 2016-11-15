@@ -11,7 +11,10 @@ Then(/^I can a see form with name, blurb and description fields$/) do
 end
 
 And (/^I add the details of my restaurant$/) do
-  fill_in_restaurant_form
+  fill_in_restaurant_form("Felix's Fiery Fish Fingers",
+                          "Bluuuurb of felix's fiery fish fingers",
+                          "desc of fish fingers",
+                          "W1K2SE")
 end
 
 And (/^I click on the Add Restaurant button$/) do
@@ -19,7 +22,10 @@ And (/^I click on the Add Restaurant button$/) do
 end
 
 Then (/^I will see my restaurant on the main page$/) do
-  see_restaurant_details
+  see_restaurant_details("Felix's Fiery Fish Fingers",
+                          "Bluuuurb of felix's fiery fish fingers",
+                          "desc of fish fingers",
+                          "W1K2SE")
 end
 
 When (/^I am on the main page$/) do

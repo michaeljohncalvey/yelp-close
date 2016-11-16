@@ -19,6 +19,11 @@ module RestaurantWorld
     expect(page).to have_content(blurb)
     expect(page).to have_content(postcode)
   end
+
+  def fill_in_review_form(rating, comment)
+    fill_in("review[rating]", with: rating)
+    fill_in("review[comment]", with: comment)
+  end
 end
 
 World(RestaurantWorld)

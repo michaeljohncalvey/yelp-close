@@ -17,21 +17,9 @@ And (/^I add the details of my restaurant$/) do
                           "W1K2SE")
 end
 
-And (/^I click on the Add Restaurant button$/) do
-  click_button "Add Restaurant"
-end
-
 Then (/^I will see my restaurant on the main page$/) do
   see_restaurant_details("Felix's Fiery Fish Fingers",
                           "Bluuuurb of felix's fiery fish fingers",
                           "desc of fish fingers",
                           "W1K2SE")
-end
-
-When (/^I am on the main page$/) do
-  visit "/restaurants/list"
-end
-
-And (/^I click the New Restaurant button$/) do
-  click_button "New Restaurant"
 end

@@ -25,6 +25,8 @@ class RestaurantsController < ApplicationController
     @name = @restaurant[0].name
     @blurb = @restaurant[0].blurb
     @description = @restaurant[0].description
+    @review = Review.new
+    @reviews = Review.all
     render action: "view_restaurant"
   end
 

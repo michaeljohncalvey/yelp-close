@@ -20,6 +20,14 @@ class RestaurantsController < ApplicationController
   def delete
   end
 
+  def view
+    @restaurant = Restaurant.where(id: params[:id])
+    @name = @restaurant[0].name
+    @blurb = @restaurant[0].blurb
+    @description = @restaurant[0].description
+    render action: "view_restaurant"
+  end
+
   private
 
   def restaurant_params

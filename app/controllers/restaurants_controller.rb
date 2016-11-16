@@ -11,6 +11,11 @@ class RestaurantsController < ApplicationController
 
   def list
     @restaurants = Restaurant.all
+    @hash = Gmaps4rails.build_markers(@restaurants) do |restaurant, marker|
+      marker.lat restaurant.latitude
+      marker.lng restaurant.longitude
+      marker.infowindow restaurant.name
+    end
     render :action => "list"
   end
 

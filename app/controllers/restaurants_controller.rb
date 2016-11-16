@@ -27,6 +27,11 @@ class RestaurantsController < ApplicationController
     @description = @restaurant[0].description
     @review = Review.new
     @reviews = Review.all
+    @hash = Gmaps4rails.build_markers(@restaurant) do |restaurant, marker|
+      marker.lat restaurant.latitude
+      marker.lng restaurant.longitude
+      marker.infowindow restaurant.name
+    end
     render action: "view_restaurant"
   end
 

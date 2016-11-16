@@ -6,7 +6,7 @@ Given (/^a restaurant exists$/) do
   add_restaurant("Dio's Develish Doner Kebabs",
                           "Bluuuurb of Dio's Develish Kebabs",
                           "desc of doner kebabs",
-                          "W7K2SD")
+                          "W1K2SE")
 end
 
 Then(/^I should see a (.*) element with ID "(.*)"$/) do |tag, id|

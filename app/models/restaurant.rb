@@ -5,4 +5,7 @@ class Restaurant < ActiveRecord::Base
   validates :description, presence: true
   validates :blurb, presence: true
   validates :postcode, presence: true
+
+  geocoded_by :postcode
+  after_validation :geocode
 end

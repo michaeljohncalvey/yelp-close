@@ -14,3 +14,9 @@ Feature: See lists of restaurants on homepage
     Given a restaurant exists
     When I go to the homepage
     Then I see a list of restaurants
+
+  Scenario: Each listing has a link back to all restaurants list
+    Given a restaurant exists
+    When I go to the homepage
+    Then I can click link for a restaurant
+    Then I can view a restaurant that has link to take my back to all lists

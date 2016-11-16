@@ -9,7 +9,7 @@ And I click the New Restaurant button
 Then I can a see form with name, blurb and description fields
 
 Scenario: Owner sees add restaurant form
-When I go to the add form page
+When I go to the new restaurant page
 Then I can a see form with name, blurb and description fields
 
 Scenario: Owner can see newly created restaurant

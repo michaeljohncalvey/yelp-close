@@ -1,7 +1,3 @@
-When(/^I go to the view restaurant page$/) do
-  visit('/restaurants/view/1')
-end
-
 And(/^I fill out the review fields$/) do
   fill_in_review_form(5, "Lovely")
 end

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  post 'review/new'
+
+  post 'review/delete'
+
   root 'restaurants#list'
 
   get 'restaurants/new'

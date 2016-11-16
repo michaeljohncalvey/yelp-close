@@ -3,4 +3,6 @@ class Review < ActiveRecord::Base
 
   validates_presence_of :rating
   validates_inclusion_of :rating, :in => 1..5
+  validates_presence_of :restaurant_id              
+  validates :restaurant, presence: true
 end

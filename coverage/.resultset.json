@@ -64,6 +64,8 @@
         null,
         1,
         1,
+        1,
+        1,
         null
       ],
       "/Users/felixharrison/Projects/week8/makersyelp/app/models/restaurant.rb": [
@@ -81,7 +83,7 @@
         0
       ]
     },
-    "timestamp": 1479296325
+    "timestamp": 1479297624
   },
   "Cucumber Features": {
     "coverage": {

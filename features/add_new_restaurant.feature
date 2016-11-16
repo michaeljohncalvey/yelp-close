@@ -3,6 +3,11 @@ As an Owner
 So other people can rate my restaurant
 I want to be able to create a restaurant with a name and description
 
+Scenario: Owner can go to add restaurant from main page
+When I am on the main page
+And I click the New Restaurant button
+Then I can a see form with name, blurb and description fields
+
 Scenario: Owner sees add restaurant form
 When I go to the add form page
 Then I can a see form with name, blurb and description fields

@@ -24,3 +24,11 @@ Then (/^I will see my restaurant on the main page$/) do
   expect(page).to have_content("Simply the best burgers in town")
   expect(page).to have_content("Real American burgers, right to yourt mouth")
 end
+
+When (/^I am on the main page$/) do
+  visit "/restaurants/list"
+end
+
+And (/^I click the New Restaurant button$/) do
+  click_button "New Restaurant"
+end

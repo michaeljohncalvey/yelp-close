@@ -2,7 +2,8 @@ class ReviewController < ApplicationController
   def new
     @review = Review.new(review_params)
     @review.save
-    redirect_to '/restaurants/list'
+    redirect_to '/restaurants/view/1'
+    #FIX THIS!!!!!!!!!!
   end
 
   def delete

@@ -7,16 +7,16 @@
 <h2><%= @restaurant.blurb %></h2>
 <h2><%= @restaurant.description %></h2>
 
-<!-- <% if @reviews.nil?%>
+<% if @reviews.nil?%>
   <p>
     Sorry, no reviews yet! Be the first to submit a review.
   </p>
 <% else %>
-  <% @reviews.each do |revieweroo| %>
-    <h3><%= revieweroo.rating %></h3>
-    <h3><%= revieweroo.comment %></h3>
+  <% @reviews.each do |review| %>
+    <h3><%= review.rating %></h3>
+    <h3><%= review.comment %></h3>
   <% end %>
-<% end %> -->
+<% end %>
 <%= render "review/new" %>
 
 

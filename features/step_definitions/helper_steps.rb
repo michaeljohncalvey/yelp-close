@@ -6,6 +6,8 @@ When(/^I go to the (.+)page$/) do |page|
     visit('/restaurants/view/1')
   when "new restaurant "
     visit('/restaurants/new')
+  else
+    raise "Page doesn't match predefined page names"
   end
 end
 

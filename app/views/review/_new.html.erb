@@ -1,0 +1,5 @@
+<%= form_for @review, url: {action: "new", controller: "review"}, html: {class: "new_review"} do |f| %>
+  <%= f.text_field :rating, placeholder: "1-5" %>
+  <%= f.text_area :comment, size: "60x12", placeholder: "Lovely." %>
+  <%= f.submit "Add Review" %>
+<% end %>

@@ -21,10 +21,9 @@ class RestaurantsController < ApplicationController
   end
 
   def view
-    @restaurant = Restaurant.where(id: params[:id])
-    @name = @restaurant[0].name
-    @blurb = @restaurant[0].blurb
-    @description = @restaurant[0].description
+    @restaurant = Restaurant.where(id: params[:id])[0]
+    @review = Review.new
+    @reviews = Review.all
     @hash = Gmaps4rails.build_markers(@restaurant) do |restaurant, marker|
       marker.lat restaurant.latitude
       marker.lng restaurant.longitude

@@ -34,4 +34,14 @@ describe Review, type: :model do
       expect(rev1).to_not be_valid
     end
   end
+
+  describe 'belongs to relationship' do
+
+    it 'should belong to a single restaurant' do
+      rev = Review.reflect_on_association(:restaurant)
+      p rev
+      expect(rev.macro).to eq :belongs_to
+    end
+  end
+
 end

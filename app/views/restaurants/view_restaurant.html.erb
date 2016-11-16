@@ -7,8 +7,16 @@
 <h2><%= @restaurant.blurb %></h2>
 <h2><%= @restaurant.description %></h2>
 
-<h3><%= @reviews[0].rating %></h3>
-<h3><%= @reviews[0].comment %></h3>
+<!-- <% if @reviews.nil?%>
+  <p>
+    Sorry, no reviews yet! Be the first to submit a review.
+  </p>
+<% else %>
+  <% @reviews.each do |revieweroo| %>
+    <h3><%= revieweroo.rating %></h3>
+    <h3><%= revieweroo.comment %></h3>
+  <% end %>
+<% end %> -->
 <%= render "review/new" %>
 
 

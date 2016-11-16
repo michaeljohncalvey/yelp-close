@@ -13,7 +13,7 @@ When I go to the new restaurant page
 Then I can a see form with name, blurb and description fields
 
 Scenario: Owner can see newly created restaurant
-When I go to the add form page
+When I go to the new restaurant page
 And I add the details of my restaurant
 And I click the Add Restaurant button
 Then I will see my restaurant on the main page

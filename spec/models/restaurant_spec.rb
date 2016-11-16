@@ -49,4 +49,12 @@ describe 'Restaurant' do
 
   end
 
+  describe 'table relationships' do
+
+    it 'has many reviews' do
+      r = Restaurant.reflect_on_association(:reviews)
+      expect(r.macro).to eq :has_many
+    end
+  end
+
 end

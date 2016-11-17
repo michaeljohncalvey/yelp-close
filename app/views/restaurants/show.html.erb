@@ -18,7 +18,11 @@
   <% end %>
 <% end %>
 
-<%= render "review/new" %>
+<% if user_signed_in? %>
+  <%= render "review/new" %>
+<% else %>
+  <p>Please sign in to leave a review</p>
+<% end %>
 
 
 <a href="javascript:window.location.href=window.location.href">Show location on map</a> <br>

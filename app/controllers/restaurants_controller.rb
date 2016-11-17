@@ -1,7 +1,7 @@
 class RestaurantsController < ApplicationController
-  before_action :authenticate_user!
 
   def new
+    authenticate_user!
     @restaurant = Restaurant.new
   end
 
@@ -25,11 +25,8 @@ class RestaurantsController < ApplicationController
   def show
     @restaurant = Restaurant.where(id: params[:id])[0]
     @reviews = Review.where(restaurant_id: @restaurant.id)
+    p @reviews
     @review = Review.new
-    # @reviews.each do |review|
-    #   puts User.find(review.user_id)
-    #   review.instance_variable_set(:@reviewer, User.find(review.user_id))
-    # end
     gmaps_marker
     render action: "show"
   end

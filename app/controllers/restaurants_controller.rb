@@ -27,7 +27,7 @@ class RestaurantsController < ApplicationController
     @reviews = Review.where(restaurant_id: @restaurant.id)
     @review = Review.new
     @reviews.each do |review|
-      @reviewer = User.find(current_user.id)
+      review.reviewer = User.find(review.user_id)
     end
     gmaps_marker
     render action: "show"

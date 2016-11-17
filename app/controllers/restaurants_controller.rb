@@ -6,26 +6,26 @@ class RestaurantsController < ApplicationController
   def create
     @restaurant = Restaurant.new(restaurant_params)
     @restaurant.save
-    redirect_to '/restaurants/list'
+    redirect_to '/'
   end
 
-  def list
+  def index
     @restaurants = Restaurant.all
-    render :action => "list"
+    render :action => "index"
   end
 
-  def modify
+  def edit
   end
 
   def delete
   end
 
-  def view
+  def show
     @restaurant = Restaurant.where(id: params[:id])[0]
     @reviews = Review.where(restaurant_id: @restaurant.id)
     @review = Review.new
     gmaps_marker
-    render action: "view_restaurant"
+    render action: "show"
   end
 
   private

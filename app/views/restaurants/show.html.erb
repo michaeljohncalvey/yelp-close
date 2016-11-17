@@ -14,7 +14,7 @@
   </p>
 <% else %>
   <% @reviews.each_with_index do |review, index| %>
-    <h4><%= index + 1 %>) Score: <%= review.rating %>  |  Comment: <%= review.comment %></h4>
+    <h4><%= index + 1 %>) Author: <%= @reviewer.email %> Score: <%= review.rating %>  |  Comment: <%= review.comment %></h4>
   <% end %>
 <% end %>
 

@@ -11,3 +11,6 @@ Feature: Viewing restaurant page
     And I click the delete button
     When I go to the homepage
     Then I should see only one restaurant
+
+  Scenario: Modify a restaurant's description and blurb
+    Then I should see a form element with ID "modify"

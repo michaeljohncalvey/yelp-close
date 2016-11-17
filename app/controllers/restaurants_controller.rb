@@ -26,9 +26,10 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.where(id: params[:id])[0]
     @reviews = Review.where(restaurant_id: @restaurant.id)
     @review = Review.new
-    @reviews.each do |review|
-      review.reviewer = User.find(review.user_id)
-    end
+    # @reviews.each do |review|
+    #   puts User.find(review.user_id)
+    #   review.instance_variable_set(:@reviewer, User.find(review.user_id))
+    # end
     gmaps_marker
     render action: "show"
   end

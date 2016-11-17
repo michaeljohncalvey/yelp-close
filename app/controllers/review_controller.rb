@@ -1,7 +1,7 @@
 class ReviewController < ApplicationController
 
   def create
-    @review = Review.new(review_params)
+    @review = current_user.reviews.build(review_params)
     @review.save
     redirect_to controller: 'restaurants', action: 'show', id: "#{@review.restaurant_id}"
   end

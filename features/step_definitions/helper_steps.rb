@@ -36,3 +36,15 @@ end
 And (/^I click the (.*) button$/) do |btn|
   click_button "#{btn}"
 end
+
+Then(/^I can see the hardcoded reviews$/) do
+  expect(page).to have_text("Bluuuurb of Dio's Develish Kebabs")
+end
+
+Then(/^I can modify a restaurant's description$/) do
+  fill_in "restaurant_description", with: "where magic food happens"
+end
+
+Then(/^I see the new modified changes$/) do
+  expect(page).to have_text("where magic food happens")
+end

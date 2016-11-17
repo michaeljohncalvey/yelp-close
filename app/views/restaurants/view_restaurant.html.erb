@@ -8,10 +8,16 @@
 <h2><%= @restaurant.blurb %></h2>
 
 <h3>Reviews</h3>
-
+<% if @reviews.nil?%>
+  <p>
+    Sorry, no reviews yet! Be the first to submit a review.
+  </p>
+<% else %>
   <% @reviews.each_with_index do |review, index| %>
     <h4><%= index + 1 %>) Score: <%= review.rating %>  |  Comment: <%= review.comment %></h4>
   <% end %>
+<% end %>
+
 <%= render "review/new" %>
 
 

@@ -1,5 +1,6 @@
-<%= form_for @review, url: {action: "new", controller: "review"}, html: {class: "new_review"} do |f| %>
+<%= form_for @review,  url: {action: "create", controller: "review"}, html: {class: "new_review"} do |f| %>
   <%= f.text_field :rating, placeholder: "1-5" %>
-  <%= f.text_area :comment, size: "60x12", placeholder: "Lovely." %>
+  <%= f.text_area :comment, size: "50x10", placeholder: "Lovely." %>
+  <%= f.hidden_field :restaurant_id, :value => params[:id] %>
   <%= f.submit "Add Review" %>
 <% end %>

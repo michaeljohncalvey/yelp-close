@@ -16,5 +16,9 @@ Then(/^I see a list of restaurants$/) do
   see_restaurant_details("Dio's Develish Doner Kebabs",
                           "Bluuuurb of Dio's Develish Kebabs",
                           "desc of doner kebabs",
-                          "W7K2SD")
+                          "W1K2SE")
+end
+
+Then(/^I can view a restaurant that has link to take my back to all lists$/) do
+  expect(page).to have_link('Go back to list of restaurants')
 end

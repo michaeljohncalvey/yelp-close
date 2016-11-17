@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   post 'review' => 'review#create'
 
-  delete 'review/:id' => 'review#delete'
+  delete 'review/:id' => 'review#destroy'
 
   root 'restaurants#index'
 
@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   post 'restaurants' => 'restaurants#create'
 
-  delete 'restaurants/:id' => 'restaurants#delete'
+  delete 'restaurants/:id' => 'restaurants#destroy'
 
   get 'restaurants/:id' => 'restaurants#show'
 

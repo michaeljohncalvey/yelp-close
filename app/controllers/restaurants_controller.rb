@@ -17,7 +17,7 @@ class RestaurantsController < ApplicationController
   def edit
   end
 
-  def delete
+  def destroy
   end
 
   def show

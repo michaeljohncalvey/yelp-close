@@ -18,6 +18,8 @@ class RestaurantsController < ApplicationController
   end
 
   def destroy
+    Restaurant.where(id: params[:id])[0].destroy
+    redirect_to '/'
   end
 
   def show

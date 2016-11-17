@@ -1,5 +1,8 @@
 Feature: Add reviews from the view restaurant page
 
+  Background:
+    Given I am signed up
+
   Scenario: I can see a form for adding reviews
     Given 1 restaurant exists
     When I go to the restaurant page

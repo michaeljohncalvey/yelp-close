@@ -25,7 +25,6 @@ class RestaurantsController < ApplicationController
   def show
     @restaurant = Restaurant.where(id: params[:id])[0]
     @reviews = Review.where(restaurant_id: @restaurant.id)
-    p @reviews
     @review = Review.new
     gmaps_marker
     render action: "show"

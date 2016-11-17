@@ -24,6 +24,17 @@ module RestaurantWorld
     fill_in("review[rating]", with: rating)
     fill_in("review[comment]", with: comment)
   end
+
+  def user_sign_up(email, password)
+    fill_in("user[email]", with: email)
+    fill_in("user[password]", with: password)
+    fill_in('user[password_confirmation]', with: password)
+  end
+
+  def user_sign_in(email, password)
+    fill_in("user[email]", with: email)
+    fill_in("user[password]", with: password)
+  end
 end
 
 World(RestaurantWorld)

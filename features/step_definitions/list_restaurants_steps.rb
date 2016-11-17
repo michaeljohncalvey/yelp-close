@@ -9,7 +9,7 @@ end
 Then(/^I can click link for a restaurant$/) do
   expect(page).to have_content("Dio's Develish Doner Kebabs")
   click_link ('1')
-  expect(current_path).to eq '/restaurants/view/1'
+  expect(current_path).to eq '/restaurants/1'
 end
 
 Then(/^I see a list of restaurants$/) do

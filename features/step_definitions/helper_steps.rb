@@ -3,7 +3,7 @@ When(/^I go to the (.+)page$/) do |page|
   when "home"
     visit('/')
   when "restaurant "
-    visit('/restaurants/view/1')
+    visit('/restaurants/1')
   when "new restaurant "
     visit('/restaurants/new')
   else

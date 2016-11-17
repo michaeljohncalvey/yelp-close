@@ -4,7 +4,7 @@
   <ul id ='restaurants'>
  <% @restaurants.each do |restaurant| %>
  <li>
-   Name: <a id="<%= restaurant.id %>" href="/restaurants/view/<%= restaurant.id %>">  <%= restaurant.name %>  </a><br>
+   Name: <a id="<%= restaurant.id %>" href="/restaurants/<%= restaurant.id %>">  <%= restaurant.name %>  </a><br>
    Description: <%= restaurant.description %> <br>
    Blurb: <%= restaurant.blurb %> <br>
    Postcode: <%= restaurant.postcode %> <br>

@@ -1,15 +1,12 @@
 class ReviewController < ApplicationController
-  def new
-    @restaurant = Restaurant.find(params[:restaurant_id])
-  end
 
   def create
     @review = Review.new(review_params)
     @review.save
-    redirect_to controller: 'restaurants', action: 'view', id: "#{@review.restaurant_id}"
+    redirect_to controller: 'restaurants', action: 'show', id: "#{@review.restaurant_id}"
   end
 
-  def delete
+  def destroy
   end
 
   private

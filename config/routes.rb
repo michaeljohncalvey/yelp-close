@@ -1,23 +1,18 @@
 Rails.application.routes.draw do
-  get 'review/new'
 
-  post 'review/create'
+  post 'review' => 'review#create'
 
-  post 'review/delete'
+  delete 'review/:id' => 'review#destroy'
 
-  root 'restaurants#list'
+  root 'restaurants#index'
 
   get 'restaurants/new'
 
-  post 'restaurants/create'
+  post 'restaurants' => 'restaurants#create'
 
-  get 'restaurants/list'
+  delete 'restaurants/:id' => 'restaurants#destroy'
 
-  get 'restaurants/modify'
-
-  get 'restaurants/delete'
-
-  get 'restaurants/view/:id' => 'restaurants#view'
+  get 'restaurants/:id' => 'restaurants#show'
 
   resources :restaurants do
     resources :reviews

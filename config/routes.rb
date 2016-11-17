@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  post 'review/new'
+  get 'review/new'
+
+  post 'review/create'
 
   post 'review/delete'
 
@@ -16,6 +18,10 @@ Rails.application.routes.draw do
   get 'restaurants/delete'
 
   get 'restaurants/view/:id' => 'restaurants#view'
+
+  resources :restaurants do
+    resources :reviews
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

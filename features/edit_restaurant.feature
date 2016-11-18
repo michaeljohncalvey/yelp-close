@@ -21,3 +21,4 @@ Feature: Modifying the restaurant details as an owner
     Then I see the new modified changes
 
   Scenario: Cannot review own restaurant
+    Then I should not see the review button

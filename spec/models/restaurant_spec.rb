@@ -55,6 +55,11 @@ describe 'Restaurant' do
       r = Restaurant.reflect_on_association(:reviews)
       expect(r.macro).to eq :has_many
     end
+
+    it 'has a user' do
+      r = Restaurant.reflect_on_association(:user)
+      expect(r.macro).to eq :belongs_to
+    end
   end
 
 end

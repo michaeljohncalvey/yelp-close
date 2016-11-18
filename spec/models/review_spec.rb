@@ -57,8 +57,13 @@ describe Review, type: :model do
       expect(rev.macro).to eq :belongs_to
     end
 
+    it 'should belong to a single user' do
+      rev = Review.reflect_on_association(:user)
+      expect(rev.macro).to eq :belongs_to
+    end
+
   end
 
 
-  
+
 end

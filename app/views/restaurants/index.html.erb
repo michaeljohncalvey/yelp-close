@@ -1,22 +1,12 @@
-<h1>Restaurants list</h1>
-
-<div class="restaurant-list">
-  <ul id ='restaurants'>
+<article class="restaurant-list">
  <% @restaurants.each do |restaurant| %>
- <li>
+ <div class="restaurant">
    Name: <a id="<%= restaurant.id %>" href="/restaurants/<%= restaurant.id %>">  <%= restaurant.name %>  </a><br>
    Description: <%= restaurant.description %> <br>
    Blurb: <%= restaurant.blurb %> <br>
    Postcode: <%= restaurant.postcode %> <br>
-   Average Rating: <div id="average-rating"> <%= restaurant.reviews.average(:rating) %> </div>
- </li>
+   Average Rating: <%= restaurant.reviews.average(:rating) %>
+ </div>
  <% end %>
-</ul>
 
-</div>
-
-<div class="add_restaurant">
-  <% if user_signed_in? %>
-    <%= button_to "New Restaurant", '/restaurants/new', method: :get %>
-  <% end %>
-</div>
+</article>

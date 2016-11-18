@@ -10,6 +10,11 @@
 <h2><%= @restaurant.description %></h2>
 <h2><%= @restaurant.blurb %></h2>
 
+<%= button_to "edit",
+  {controller: :restaurants, action: :edit, id: @restaurant.id},
+  form: {id: "modify"},
+  method: :get %>
+
 <h3>Reviews</h3>
 <p> Average Rating: </p> <div id="average-rating"> <%= @reviews.average(:rating) %> </div>
 <% if @reviews.nil?%>

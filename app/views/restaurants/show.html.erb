@@ -25,7 +25,7 @@
 <% end %>
 
 <h3>Reviews</h3>
-<p> Average Rating: </p> <div id="average-rating"> <%= @reviews.average(:rating) %> </div>
+<p> Average Rating: </p> <div id="average-rating"> <%= star_rating(@reviews.average(:rating)) %> </div>
 <% if @reviews.length == 0%>
   <p>Sorry, no reviews yet! Be the first to submit a review.</p>
 <% else %>

@@ -11,7 +11,8 @@ class ReviewController < ApplicationController
       @review.save
       alert = ""
     end
-    redirect_to controller: 'restaurants', action: 'show', id: "#{params["review"]["restaurant_id"]}", alert: alert
+    flash[:notice] = alert
+    redirect_to controller: 'restaurants', action: 'show', id: "#{params["review"]["restaurant_id"]}"
   end
 
   def destroy

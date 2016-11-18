@@ -4,7 +4,7 @@ describe Review, type: :model do
   let!(:restaurant) {Restaurant.create(name: "Brian's Bagels",
                                     blurb: "Best Bagels in Town",
                                     description: "Bring you bootilicious self down for some brilliant Bagels",
-                                    postcode: "TN327WE")
+                                    postcode: "TN327WE", user_id: 1)
                                   }
 
   subject(:review) {Review.create(rating: 5, comment: "It's one of the best, the food is so fiery, the food is so great.", restaurant_id: restaurant.id) }
@@ -57,8 +57,13 @@ describe Review, type: :model do
       expect(rev.macro).to eq :belongs_to
     end
 
+    it 'should belong to a single user' do
+      rev = Review.reflect_on_association(:user)
+      expect(rev.macro).to eq :belongs_to
+    end
+
   end
 
 
-  
+
 end

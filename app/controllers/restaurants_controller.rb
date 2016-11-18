@@ -25,7 +25,7 @@ class RestaurantsController < ApplicationController
   end
 
   def destroy
-    Restaurant.where(id: params[:id])[0].destroy
+    Restaurant.find(params[:id]).destroy
     redirect_to '/'
   end
 

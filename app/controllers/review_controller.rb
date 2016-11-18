@@ -1,5 +1,7 @@
 class ReviewController < ApplicationController
 
+  include ReviewHelper
+
   def create
     authenticate_user!
     @review = current_user.reviews.build(review_params)
@@ -10,9 +12,4 @@ class ReviewController < ApplicationController
   def destroy
   end
 
-  private
-
-  def review_params
-    params.require(:review).permit(:rating, :comment, :restaurant_id)
-  end
 end

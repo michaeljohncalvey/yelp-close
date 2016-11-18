@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
   get 'restaurants/:id' => 'restaurants#show'
 
+  patch 'restaurants/:id' => 'restaurants#update'
+
   resources :restaurants do
     resources :reviews
   end

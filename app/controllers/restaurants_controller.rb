@@ -17,9 +17,18 @@ class RestaurantsController < ApplicationController
   end
 
   def edit
+    @restaurant = Restaurant.where(id: params[:id])[0]
+  end
+
+  def update
+    @restaurant = Restaurant.find(params[:id])
+    @restaurant.update_attributes(restaurant_params)
+    redirect_to controller: 'restaurants', action: 'show', id: "#{@restaurant.id}"
   end
 
   def destroy
+    Restaurant.find(params[:id]).destroy
+    redirect_to '/'
   end
 
   def show

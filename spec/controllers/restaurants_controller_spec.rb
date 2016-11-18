@@ -25,9 +25,10 @@ RSpec.describe RestaurantsController, type: :controller do
 
   describe "DELETE #destroy" do
 
-    it "returns http success" do
+    it "returns http redirect" do
+      Restaurant.create(name: "res",description: "amazing food", blurb: "milkshakes are the thing", postcode: "n7 9ds")
       delete :destroy, id: 1
-      expect(response).to have_http_status(:success)
+      expect(response).to have_http_status(:redirect)
     end
   end
 

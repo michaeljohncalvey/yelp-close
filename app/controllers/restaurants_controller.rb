@@ -2,6 +2,8 @@ class RestaurantsController < ApplicationController
 
   include RestaurantsHelper
 
+  before_action :authenticate_user!, :except => [:index, :show]
+
   def new
     authenticate_user!
     @restaurant = Restaurant.new

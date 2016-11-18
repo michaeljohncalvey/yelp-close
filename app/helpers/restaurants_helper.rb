@@ -2,7 +2,7 @@ module RestaurantsHelper
   private
 
   def restaurant_params
-    params.require(:restaurant).permit(:name, :blurb, :description, :postcode)
+    params.require(:restaurant).permit(:name, :blurb, :description, :postcode, :user_id)
   end
 
   def gmaps_marker

@@ -1,8 +1,8 @@
 Feature: Average rating is displayed
 
 Background:
-  Given I am signed up
   Given 1 restaurant exists
+  Given I am signed up
 
   Scenario: On list of restaurants
     When I go to the homepage

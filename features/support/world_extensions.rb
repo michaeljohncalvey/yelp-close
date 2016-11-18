@@ -1,9 +1,11 @@
 module RestaurantWorld
   def add_restaurant(name, description, blurb, postcode)
-    Restaurant.create(name: name,
-                      description: description,
-                      blurb: blurb,
-                      postcode: postcode)
+    visit('users/sign_up')
+    user_sign_in("owner@gmail.com", "Password123")
+    click_button "New Restaurant"
+    fill_in_restaurant_form(name, description, blurb, postcode)
+    click_button "Add Restaurant"
+    user_sign_out
   end
 
   def fill_in_restaurant_form(name, description, blurb, postcode)
@@ -26,14 +28,22 @@ module RestaurantWorld
   end
 
   def user_sign_up(email, password)
+    visit('/users/sign_up')
     fill_in("user[email]", with: email)
     fill_in("user[password]", with: password)
     fill_in('user[password_confirmation]', with: password)
+    find('[name=commit]').click
   end
 
   def user_sign_in(email, password)
+    visit('/users/sign_in')
     fill_in("user[email]", with: email)
     fill_in("user[password]", with: password)
+    click_button "Log in"
+  end
+
+  def user_sign_out
+    click_button "Sign out"
   end
 end
 

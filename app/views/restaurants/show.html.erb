@@ -19,7 +19,6 @@
   method: :get %>
 <% end %>
 
-<% if current_user.id != @restaurant.user.id %>
   <h3>Reviews</h3>
   <p> Average Rating: </p> <div id="average-rating"> <%= @reviews.average(:rating) %> </div>
   <% if @reviews.nil?%>
@@ -32,7 +31,8 @@
     <% end %>
   <% end %>
 
-  <% if user_signed_in? %>
+<% if user_signed_in? %>
+  <% if current_user.id != @restaurant.user.id %>
     <%= render "review/new" %>
   <% else %>
     <p>Please sign in to leave a review</p>

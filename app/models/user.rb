@@ -6,4 +6,10 @@ class User < ActiveRecord::Base
 
   has_many :reviews
   has_many :restaurants
+
+  has_many :reviewed_restaurants, through: :reviews, source: :restaurant
+
+  def has_reviewed?(restaurant)
+    reviewed_restaurants.include? restaurant
+  end
 end

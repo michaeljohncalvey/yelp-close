@@ -31,10 +31,12 @@ Given (/^([0-9]+) restaurant(s)? exist(s)?$/) do |num_times, i, j|
 end
 
 And (/^has reviews with (.+)$/) do |ratings|
-  visit '/restaurants/1'
   ratings.split(",").map(&:to_i).each do |rating|
+    user_sign_up("ab#{rating}@email.com", "password")
+    visit '/restaurants/1'
     fill_in_review_form(rating, "comment")
     click_button "Add Review"
+    user_sign_out
   end
 end
 

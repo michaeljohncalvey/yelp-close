@@ -1,6 +1,7 @@
 Feature: Viewing restaurant page
 
   Background:
+    Given I am signed up
     Given 2 restaurants exist
     When I go to the restaurant page
 

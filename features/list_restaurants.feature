@@ -1,5 +1,8 @@
 Feature: See lists of restaurants on homepage
 
+  Background:
+    Given I am signed up
+
   Scenario: List container exists
     When I go to the homepage
     Then A restaurant-list class div must exist

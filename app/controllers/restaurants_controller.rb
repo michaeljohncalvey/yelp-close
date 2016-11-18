@@ -1,5 +1,7 @@
 class RestaurantsController < ApplicationController
+
   def new
+    authenticate_user!
     @restaurant = Restaurant.new
   end
 

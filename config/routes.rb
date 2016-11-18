@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+  
   post 'review' => 'review#create'
 
   delete 'review/:id' => 'review#destroy'

@@ -12,5 +12,11 @@
  </li>
  <% end %>
 </ul>
-<%= button_to "New Restaurant", '/restaurants/new', method: :get %>
+
+</div>
+
+<div class="add_restaurant">
+  <% if user_signed_in? %>
+    <%= button_to "New Restaurant", '/restaurants/new', method: :get %>
+  <% end %>
 </div>

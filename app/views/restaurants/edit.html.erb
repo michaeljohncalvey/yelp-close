@@ -1,6 +1,6 @@
 <%= form_for(@restaurant, url: {action: 'update', id: @restaurant.id}) do |form| %>
   <%= form.text_area :description, size:"50x12", value: @restaurant.description %>
   <%= form.text_field :blurb , value: @restaurant.blurb %>
-  <%= form.text_field :postcode %>
+  <%= form.text_field :postcode, value: @restaurant.postcode %>
   <%= form.submit "update" %>
 <% end %>
